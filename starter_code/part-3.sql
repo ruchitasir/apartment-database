@@ -163,7 +163,9 @@ SELECT * FROM owners;
 
 --- 13.Show the highest age of all owners.
     SELECT MAX(age) FROM owners;
-    78
+    78 
+    or 
+    SELECT age FROM owners ORDER BY age DESC LIMIT 1;
 
 --- 14.Show the highest age of owners who are under 30 and whose name contains an `o`. Limit to one result.
      SELECT MAX(age) FROM owners WHERE age <30 and name LIKE '%o%' LIMIT 1;
